@@ -244,7 +244,7 @@ def get_parameters():
                         type=str, help='Sentence BERT model name (default is "all-mpnet-base-v2")')
     
     parser.add_argument('--file-path', dest='file_path', 
-                        default="../open_type/release/crowd/test.json", type=str,
+                        default="../open_type/release/crowd/bin_2.json", type=str,
                         help='determines the path for test or dev file provided by open type (Choi et al., 2018) \
                         -- https://www.cs.utexas.edu/~eunsol/html_pages/open_entity.html \
                         (default is local path for file release/crowd/test.json)')
