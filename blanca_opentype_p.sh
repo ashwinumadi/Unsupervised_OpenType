@@ -15,9 +15,9 @@ module load anaconda
 module load cuda/12.1.1
 cd /rc_scratch/asum8093/open_type_p/
 
-wget http://nlp.cs.washington.edu/entity_type/data/ultrafine_acl18.tar.gz
+#wget http://nlp.cs.washington.edu/entity_type/data/ultrafine_acl18.tar.gz
 
-tar -xvzf ultrafine_acl18.tar.gz
+#tar -xvzf ultrafine_acl18.tar.gz
 
 #cd ../
 
