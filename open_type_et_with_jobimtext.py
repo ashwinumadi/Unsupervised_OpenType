@@ -10,6 +10,7 @@ import numpy as np
 import json
 import argparse
 import logging
+import os
 # https://www.sbert.net/docs/usage/semantic_textual_similarity.html
 
 
@@ -398,7 +399,11 @@ if __name__ == '__main__':
     # https://www.sbert.net/docs/pretrained_models.html
     model_sentence_transformer = SentenceTransformer(args.model)
     logging.info("model is loaded")
-    
+    logging.info("*"*50)
+    print("*"*50)
+    logging.info(os.getcwd())
+    #print()
+    print(os.getcwd())
     with open("./../open_type_p/open_type/release/crowd/bin_2.json", "r") as f: #args.file_path
         data_lines = f.readlines()
     data_ = [json.loads(sent.strip()) for sent in data_lines]
