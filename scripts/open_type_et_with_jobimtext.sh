@@ -15,8 +15,8 @@ echo "predictions of headword for unsupervised ultra-fine entity typing with pre
 # --weighted-average is not given
 python open_type_et_with_jobimtext.py \
 --model all-mpnet-base-v2 \
---file-path ../open_type_p/release/crowd/bin_2.json \
---types-file-path ../open_type_p/release/ontology/types.txt \
+--file-path /rc_scratch/asum8093/open_type_p/open_type/release/crowd/bin_2.json \
+--types-file-path /rc_scratch/asum8093/open_type_p/open_type/release/ontology/types.txt \
 --include-isas \
 --number-of-isas 10 \
 --number-of-predictions 10 \
