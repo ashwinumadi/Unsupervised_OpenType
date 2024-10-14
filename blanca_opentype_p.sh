@@ -17,17 +17,17 @@ cd /rc_scratch/asum8093/open_type_p/
 
 #wget http://nlp.cs.washington.edu/entity_type/data/ultrafine_acl18.tar.gz
 
-tar -xvzf ultrafine_acl18.tar.gz
+#tar -xvzf ultrafine_acl18.tar.gz
 
 #cd ../
 
 mkdir open_type
 mv release/ /open_type
 
-mv /Unsupervised_OpenType/bin_1.json /open_type/release/crowd/
-mv /Unsupervised_OpenType/bin_2.json /open_type/release/crowd/
-mv /Unsupervised_OpenType/bin_3.json /open_type/release/crowd/
-mv .Unsupervised_OpenType/bin_4.json /open_type/release/crowd/
+mv Unsupervised_OpenType/bin_1.json open_type/release/crowd/
+mv Unsupervised_OpenType/bin_2.json open_type/release/crowd/
+mv Unsupervised_OpenType/bin_3.json open_type/release/crowd/
+mv Unsupervised_OpenType/bin_4.json open_type/release/crowd/
 
 conda activate py38-pt1131-cuda117
 
@@ -43,7 +43,7 @@ pwd
 
 echo "====== Running The Model ========"
 
-bash ./Unsupervised_OpenType/scripts/open_type_et_with_jobimtext.sh
+bash Unsupervised_OpenType/scripts/open_type_et_with_jobimtext.sh
 
 cd ./open_type/
 git clone https://github.com/uwnlp/open_type.git
