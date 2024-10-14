@@ -408,7 +408,7 @@ if __name__ == '__main__':
     #print()
     #print(os.chdir(os.getcwd() + '/../'))
     #os.chdir(os.getcwd() + '/../')
-    with open("./open_type_p/open_type/release/crowd/bin_2.json", "r") as f: #args.file_path
+    with open(args.file_path, "r") as f: #
         data_lines = f.readlines()
     data_ = [json.loads(sent.strip()) for sent in data_lines]
     logging.info("data is loaded")
