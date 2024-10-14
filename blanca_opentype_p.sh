@@ -28,24 +28,24 @@ module load cuda/12.1.1
 
 cd /rc_scratch/asum8093/open_type_pp/
 
-wget http://nlp.cs.washington.edu/entity_type/data/ultrafine_acl18.tar.gz
+#wget http://nlp.cs.washington.edu/entity_type/data/ultrafine_acl18.tar.gz
 
-tar -xvzf ultrafine_acl18.tar.gz
+#tar -xvzf ultrafine_acl18.tar.gz
 
-mkdir open_type
-mv release/ ./open_type
+#mkdir open_type
+#mv release/ ./open_type
 
-mv Unsupervised_OpenType/bin_1.json ./open_type/release/crowd/
-mv Unsupervised_OpenType/bin_2.json ./open_type/release/crowd/
-mv Unsupervised_OpenType/bin_3.json ./open_type/release/crowd/
-mv Unsupervised_OpenType/bin_4.json ./open_type/release/crowd/
+mv ./Unsupervised_OpenType/bin_1.json ./open_type/release/crowd/
+mv ./Unsupervised_OpenType/bin_2.json ./open_type/release/crowd/
+mv ./Unsupervised_OpenType/bin_3.json ./open_type/release/crowd/
+mv ./Unsupervised_OpenType/bin_4.json ./open_type/release/crowd/
 
 conda activate py38-pt1131-cuda117
 
 pip install stanza
 pip install sentence-transformers
 
-cd Unsupervised_OpenType/
+cd ./Unsupervised_OpenType/
 
 mkdir predictions_jobimtext
 
