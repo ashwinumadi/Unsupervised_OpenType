@@ -44,10 +44,11 @@ conda activate py38-pt1131-cuda117
 
 pip install stanza
 pip install sentence-transformers
+pip install inflect
 
 cd ./Unsupervised_OpenType/
 
-mkdir predictions_jobimtext
+#mkdir predictions_jobimtext
 
 echo "====== Running The Model ========"
 
