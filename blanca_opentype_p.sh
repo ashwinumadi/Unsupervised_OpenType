@@ -46,7 +46,7 @@ pip install stanza
 pip install sentence-transformers
 pip install inflect
 echo "-----------------"
-cwd
+pwd
 
 #cd ./Unsupervised_OpenType/
 
@@ -59,7 +59,7 @@ bash scripts/open_type_et_with_jobimtext.sh
 cd ../open_type/
 git clone https://github.com/uwnlp/open_type.git
 
-cd './open_type'
+cd ./open_type
 python scorer.py ../../Unsupervised_OpenType/predictions_jobimtext/predictions_open_type_with_jobimtext
 
 echo "== End of Job =="
