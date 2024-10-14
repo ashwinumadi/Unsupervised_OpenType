@@ -22,7 +22,7 @@ cd /rc_scratch/asum8093/open_type_p/
 #cd ../
 
 mkdir open_type
-mv release/ /open_type
+mv release open_type/
 
 mv Unsupervised_OpenType/bin_1.json open_type/release/crowd/
 mv Unsupervised_OpenType/bin_2.json open_type/release/crowd/
