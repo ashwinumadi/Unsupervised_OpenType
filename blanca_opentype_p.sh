@@ -26,8 +26,8 @@ mv release open_type/
 
 #cp Unsupervised_OpenType/bin_1.json open_type/release/crowd/
 #cp Unsupervised_OpenType/bin_2.json open_type/release/crowd/
-cp Unsupervised_OpenType/bin_3.json open_type/release/crowd/
-#cp Unsupervised_OpenType/bin_4.json open_type/release/crowd/
+#cp Unsupervised_OpenType/bin_3.json open_type/release/crowd/
+cp Unsupervised_OpenType/bin_4.json open_type/release/crowd/
 
 conda activate py38-pt1131-cuda117
 
