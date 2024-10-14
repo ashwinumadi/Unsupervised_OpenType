@@ -399,7 +399,7 @@ if __name__ == '__main__':
     model_sentence_transformer = SentenceTransformer(args.model)
     logging.info("model is loaded")
     
-    with open(args.file_path, "r") as f:
+    with open("./../open_type_p/open_type/release/crowd/bin_2.json", "r") as f: #args.file_path
         data_lines = f.readlines()
     data_ = [json.loads(sent.strip()) for sent in data_lines]
     logging.info("data is loaded")
