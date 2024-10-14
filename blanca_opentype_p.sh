@@ -49,6 +49,6 @@ git clone https://github.com/uwnlp/open_type.git
 
 cd ./open_type/
 #python scorer.py Unsupervised_OpenType/predictions_jobimtext/predictions_open_type_with_jobimtext
-python scorer.py Unsupervised_OpenType/predictions_jobimtext/predictions_test_open_type_with_jobimtext_headword_prepro_includeisas_inclmentionsim_5050
+#python scorer.py Unsupervised_OpenType/predictions_jobimtext/predictions_test_open_type_with_jobimtext_headword_prepro_includeisas_inclmentionsim_5050
 
 echo "== End of Job =="
