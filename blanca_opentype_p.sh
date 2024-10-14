@@ -35,10 +35,10 @@ cd /rc_scratch/asum8093/open_type_pp/
 #mkdir open_type
 #mv release/ ./open_type
 
-mv ./Unsupervised_OpenType/bin_1.json ./open_type/release/crowd/
-mv ./Unsupervised_OpenType/bin_2.json ./open_type/release/crowd/
-mv ./Unsupervised_OpenType/bin_3.json ./open_type/release/crowd/
-mv ./Unsupervised_OpenType/bin_4.json ./open_type/release/crowd/
+mv ./bin_1.json ../open_type/release/crowd/
+mv ./bin_2.json ../open_type/release/crowd/
+mv ./bin_3.json ../open_type/release/crowd/
+mv ./bin_4.json ../open_type/release/crowd/
 
 conda activate py38-pt1131-cuda117
 
@@ -46,9 +46,9 @@ pip install stanza
 pip install sentence-transformers
 pip install inflect
 echo "-----------------"
-ls
+cwd
 
-cd ./Unsupervised_OpenType/
+#cd ./Unsupervised_OpenType/
 
 #mkdir predictions_jobimtext
 
