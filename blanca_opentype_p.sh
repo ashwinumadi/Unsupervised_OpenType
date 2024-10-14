@@ -56,7 +56,7 @@ echo "====== Running The Model ========"
 
 bash scripts/open_type_et_with_jobimtext.sh
 
-cd ../open_type_p/
+cd /rc_scratch/asum8093/open_type_pp/
 git clone https://github.com/uwnlp/open_type.git
 
 cd ./open_type
