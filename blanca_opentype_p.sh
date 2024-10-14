@@ -13,7 +13,7 @@ module purge
 
 module load anaconda
 module load cuda/12.1.1
-cd /rc_scratch/asum8093/open_type_pp/
+cd /rc_scratch/asum8093/open_type_p/
 
 wget http://nlp.cs.washington.edu/entity_type/data/ultrafine_acl18.tar.gz
 
@@ -45,7 +45,6 @@ echo "====== Running The Model ========"
 
 bash ./Unsupervised_OpenType/scripts/open_type_et_with_jobimtext.sh
 
-#cd /rc_scratch/asum8093/open_type_pp/
 cd ./open_type/
 git clone https://github.com/uwnlp/open_type.git
 
