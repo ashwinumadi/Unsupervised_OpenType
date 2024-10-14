@@ -404,7 +404,7 @@ if __name__ == '__main__':
     logging.info(os.getcwd())
     #print()
     print(os.getcwd())
-    logging.info(os.chdir(os.getcwd() + '/../'))
+    #logging.info(os.chdir(os.getcwd() + '/../'))
     #print()
     #print(os.chdir(os.getcwd() + '/../'))
     #os.chdir(os.getcwd() + '/../')
