@@ -13,10 +13,10 @@ OUTDIR="predictions_jobimtext"
 echo "predictions of headword for unsupervised ultra-fine entity typing with prepro, include isas, mention sim, 50,50"
 # ngram and first do not matter in the below config
 # --weighted-average is not given
-python /Unsupervised_OpenType/open_type_et_with_jobimtext.py \
+python Unsupervised_OpenType/open_type_et_with_jobimtext.py \
 --model all-mpnet-base-v2 \
---file-path /open_type/release/crowd/bin_2.json \
---types-file-path /open_type/release/ontology/types.txt \
+--file-path Unsupervised_OpenType/open_type/release/crowd/bin_2.json \
+--types-file-path Unsupervised_OpenType/open_type/release/ontology/types.txt \
 --include-isas \
 --number-of-isas 10 \
 --number-of-predictions 10 \
