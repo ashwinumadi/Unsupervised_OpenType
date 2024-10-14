@@ -2,7 +2,7 @@
 
 # path of python
 #PYTHONBIN=/home/sevgili/anaconda3-2020-11/envs/unsupervisedufet-env/bin/python3.7
-OUTDIR="predictions_jobimtext"
+OUTDIR="Unsupervised_OpenType/predictions_jobimtext"
 
 
 # ##################################
