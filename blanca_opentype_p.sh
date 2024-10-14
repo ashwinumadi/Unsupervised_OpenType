@@ -43,12 +43,14 @@ pwd
 
 echo "====== Running The Model ========"
 
+mkdir Unsupervised_OpenType/predictions_jobimtext
+
 bash Unsupervised_OpenType/scripts/open_type_et_with_jobimtext.sh
 
 cd ./open_type/
 git clone https://github.com/uwnlp/open_type.git
 
 cd ./open_type/
-python scorer.py ../../Unsupervised_OpenType/predictions_jobimtext/predictions_open_type_with_jobimtext
+python scorer.py Unsupervised_OpenType/predictions_jobimtext/predictions_open_type_with_jobimtext
 
 echo "== End of Job =="
