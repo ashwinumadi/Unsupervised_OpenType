@@ -45,6 +45,8 @@ conda activate py38-pt1131-cuda117
 pip install stanza
 pip install sentence-transformers
 pip install inflect
+echo "-----------------"
+ls
 
 cd ./Unsupervised_OpenType/
 
