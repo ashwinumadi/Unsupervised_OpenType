@@ -57,20 +57,19 @@ def get_senses_from_jobimtext(mention, cluster_type):
 # TODO: the same function as preprocess in preprocess.py -- write them in common utils in one function.
 # singularize the label
 def postprocess(label, inflect_engine, nlp):
-    try:
-        singular_label = inflect_engine.singular_noun(label)
+  try:
+      singular_label = inflect_engine.singular_noun(label)
 
-        # for the cases like "actress" or "a focus", cross-check with stanza's feats of 'Number=Plur'
-        feats = nlp(label).sentences[0].words[-1].feats
-        if (label[-1] == 's' or label[-1] == 'S') and feats and 'Number=Plur' in feats.split('|') and \
-                singular_label:
-            return singular_label
-        elif label[-1] != 's' and label[-1] != 'S' and singular_label:
-            return singular_label
-    except:
-        return ""
-
-    return label
+      # for the cases like "actress" or "a focus", cross-check with stanza's feats of 'Number=Plur'
+      feats = nlp(label).sentences[0].words[-1].feats
+      if (label[-1] == 's' or label[-1] == 'S') and feats and 'Number=Plur' in feats.split('|') and \
+              singular_label:
+          return singular_label
+      elif label[-1] != 's' and label[-1] != 'S' and singular_label:
+          return singular_label
+  except:
+    return ""
+  return label
 
 
 # since 'thing' is the most common, we thought it is noisy.
