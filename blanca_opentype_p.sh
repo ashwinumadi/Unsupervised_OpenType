@@ -13,32 +13,21 @@ module purge
 
 module load anaconda
 module load cuda/12.1.1
-#cd /rc_scratch/asum8093/open_type/resources/
-#wget http://nlp.stanford.edu/data/glove.840B.300d.zip
-#unzip glove.840B.300d.zip -d ./
+cd /rc_scratch/asum8093/open_type_pp/
 
-#wget http://nlp.cs.washington.edu/entity_type/data/ultrafine_acl18.tar.gz
+wget http://nlp.cs.washington.edu/entity_type/data/ultrafine_acl18.tar.gz
 
-#tar -xvzf ultrafine_acl18.tar.gz
+tar -xvzf ultrafine_acl18.tar.gz
 
 #cd ../
 
+mkdir open_type
+mv release/ ./open_type
 
-
-
-cd /rc_scratch/asum8093/open_type_pp/
-
-#wget http://nlp.cs.washington.edu/entity_type/data/ultrafine_acl18.tar.gz
-
-#tar -xvzf ultrafine_acl18.tar.gz
-
-#mkdir open_type
-#mv release/ ./open_type
-
-mv ./bin_1.json ../open_type/release/crowd/
-mv ./bin_2.json ../open_type/release/crowd/
-mv ./bin_3.json ../open_type/release/crowd/
-mv ./bin_4.json ../open_type/release/crowd/
+mv ./Unsupervised_OpenType/bin_1.json ./open_type/release/crowd/
+mv ./Unsupervised_OpenType/bin_2.json ./open_type/release/crowd/
+mv ./Unsupervised_OpenType/bin_3.json ./open_type/release/crowd/
+mv ./Unsupervised_OpenType/bin_4.json ./open_type/release/crowd/
 
 conda activate py38-pt1131-cuda117
 
@@ -54,12 +43,13 @@ pwd
 
 echo "====== Running The Model ========"
 
-bash scripts/open_type_et_with_jobimtext.sh
+bash ./Unsupervised_OpenType/scripts/open_type_et_with_jobimtext.sh
 
-cd /rc_scratch/asum8093/open_type_pp/
+#cd /rc_scratch/asum8093/open_type_pp/
+cd ./open_type/
 git clone https://github.com/uwnlp/open_type.git
 
-cd ./open_type
+cd ./open_type/
 python scorer.py ../../Unsupervised_OpenType/predictions_jobimtext/predictions_open_type_with_jobimtext
 
 echo "== End of Job =="
