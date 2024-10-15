@@ -5,7 +5,7 @@
 #SBATCH --time=24:00:00
 #SBATCH --partition=blanca-curc-gpu
 #SBATCH --gres=gpu:1
-#SBATCH --output=Crowd_test_bin3_api-%j.out
+#SBATCH --output=Crowd_test_bin2_api-%j.out
 #SBATCH --mail-type="ALL"
 #SBATCH --mail-user="asum8093@colorado.edu"
 
@@ -25,8 +25,8 @@ mkdir open_type
 mv release open_type/
 
 #cp Unsupervised_OpenType/bin_1.json open_type/release/crowd/
-#cp Unsupervised_OpenType/bin_2.json open_type/release/crowd/
-cp Unsupervised_OpenType/bin_3.json open_type/release/crowd/
+cp Unsupervised_OpenType/bin_2.json open_type/release/crowd/
+#cp Unsupervised_OpenType/bin_3.json open_type/release/crowd/
 #cp Unsupervised_OpenType/bin_4.json open_type/release/crowd/
 
 conda activate py38-pt1131-cuda117
